@@ -1,0 +1,45 @@
+// Head scripts start loading really early before the DOM gets to main processing;you want libraries here so they have time to get going.
+
+//You can put scripts in <body> if you don't want your script to be placed inside a function, 
+or if your script should write page content, it should be placed in the body section.
+
+
+//Javascript in the head is only called when an event is triggered while in the body called when a page loads every refreshing.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA SCRIPT</title>
+<script>
+    
+  window.addEventListener("load",function(){alert("i don not what's this")});
+  
+
+ //1st function  - > this will not work
+document.getElementById('task').addEventListener("click",function()
+{
+alert("Hey, there")
+});
+
+//2nd function
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+    </script>
+</head>
+
+<body>
+
+    <button id="task">CLICK ME </button>
+
+</body>
+
+
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+    
+
+</html>
