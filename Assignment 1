@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+#myDiv{
+height: 9rem; width: 6rem; float : left; display: flex;
+    }
+
+#div2{
+height: 9rem; width: 6rem; float : left;
+ }
+</style>
+</head>
+
+<body>
+    <div onclick="changeColor()" id="myDiv" style="background-color: blue;">Hey, there !!</div>
+
+    <div onclick="" id="div2" style="background-color: pink;">
+    Hey, I'm pink !!   </div>
+
+<script>
+    function changeColor()
+    {
+        document.getElementById('myDiv').style.backgroundColor="red";
+    }
+
+     document.getElementById("div2").onclick=function(e){
+         e.target.style.backgroundColor="yellow"
+     };
+    
+</script>
+</body>
+</html>
