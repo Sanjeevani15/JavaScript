@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+//target object
+function changeColor(e)
+        {
+            e.target.style.backgroundColor="orange";
+        }
+
+    window.onload=function(){
+        document.getElementById('btn').onclick=function(event){
+           console.log("Test"); 
+           console.log(event); 
+        };
+
+        //this will take us to google.com
+        document.getElementById('anchor').onclick=function()
+        {
+            console.log("Test2");
+        };
+
+      //here we use preventDefault to prevent the default behaviur of event which is to navigate
+      //to google.com 
+        document.getElementById('anchor2').onclick=function(event)
+        {
+            console.log("Test4");
+            event.preventDefault(); 
+        };
+
+
+    // button first and button second
+    //changeColor become here a property here
+      document.getElementById('a-btn').onclick=changeColor;
+      document.getElementById('b-btn').onclick=changeColor;
+
+    }
+</script>
+</head>
+
+<body>
+  <button id="btn">Click ME!!</button>
+   <a href="https://google.com" id="anchor">GOOGLE</a>
+   <a href="https://google.com" id="anchor2">GOOGLE</a>
+
+   <!-- Target Object -->
+   <button id="a-btn">First</button>
+   <button id="b-btn">Second</button>
+
+
+</script>
+</body>
+</html>
