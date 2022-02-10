@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+  
+<p id="p1">THIS IS SOME PARAGRAPH</p>
+
+</body>
+<SCRIPT>
+    function add(a,b)
+    {
+        return a+b;
+    }
+   
+ add(20,10);    //this results in 30
+
+    //bind function createas a copy of the function
+    var addTen=add.bind(null,10)
+    addTen(50);   //this results in 60
+
+
+</SCRIPT>
+</html>
