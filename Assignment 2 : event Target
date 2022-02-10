@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .div{
+            border: 2px solid black;
+        }
+    </style> -->
+    <script>
+        
+  //target object
+  function changeColor(e){
+  e.target.style.backgroundColor="yellow";
+//   e.stopPropagation();
+  };
+
+//bind function and about e stop immediate propagationa and all
+var func2=changeColor.bind();
+
+
+
+
+window.onload=function(){
+
+document.getElementById("div1").onclick=changeColor;
+document.getElementById("div2").onclick=changeColor;
+document.getElementById("div3").onclick=changeColor;
+
+
+};
+
+    </script>
+</head>
+<body>
+    
+    <div id="div1" class="div" > this is div 1
+        <div id="div2" class="div" >this is div 2
+            <div id="div3" class="div" >
+               this is div 3
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
